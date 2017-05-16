@@ -13,7 +13,7 @@ const renderColor =(hairColor)=>{
 
 const renderListItem = (name,value) => {
 const li= document.createElement('li')
-li.textcontent=`${name}:${value}`
+li.innerHTML=`${name}:${value}`
 return li
 }
 
@@ -34,9 +34,9 @@ const handleSubmit = (ev) => {
 
 const person={
     name: form.personName.value,
-    hairColor: form.haircolor.value,
-    age: form.age.value
-    birthplace:form.birthplace.value,
+    hairColor: renderColor(form.hairColor.value).outerHTML,
+    age: form.age.value,
+    birthplace: form.birthplace.value,
 }
     
 const list=renderList(person)
