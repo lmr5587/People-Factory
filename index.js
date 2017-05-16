@@ -13,6 +13,8 @@ const handleSubmit = (ev) => {
   const colorDiv = `
     <div style="height: 50px; width: 100px; background-color: ${hairColor}"></div>
   `
+console.log(label)
+
 var list = document.createElement('ul')
 var text =document.createTextNode('Form Submition');
  list.appendChild(text);
@@ -37,6 +39,8 @@ var listAge =document.createTextNode(age);
 var bplace =document.createTextNode(birthplace);
  listItemBirthplace.appendChild(bplace);
 document.body.appendChild(listItemBirthplace);
+
+
 //   details.innerHTML = `
     // <ul>
     //   <li>Name: ${personName}</li>
